@@ -16,7 +16,7 @@ export default function LoginForm() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
   const [state, formAction] = useFormState(authenticate, undefined);
-  const errorMessage = state?.error;
+  const errorMessage = state;
 
   return (
     <form action={formAction} className="space-y-3">
